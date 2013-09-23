@@ -4,6 +4,7 @@ public class Sounds extends Activity implements OnClickListener
     MediaPlayer click;
     MediaPlayer trail_sounds;
     Boolean playing = false;
+    float volume = 0.5f;
     //Puts click listeners on the button objects in the scene
     public void onCreate(Bundle savedInstanceState)
     {
@@ -11,12 +12,19 @@ public class Sounds extends Activity implements OnClickListener
         //audio found in res/raw/ directiory
         click = MediaPlayer.create(this, R.raw.notifictation);
         trail_sounds = MediaPlayer.create(this, R.raw.Trail_Music);
+        trail_sounds.setVolume(volume,volume);
         //directory for buttons is default creation
         final Button cick_b = (Button) findViewById(R.id.click_b);
-        button1.setOnClickListener(this);
+        click_b.setOnClickListener(this);
 
         final Button play_b = (Button) findViewById(R.id.play_b);
-        button1.setOnClickListener(this);
+        play_b.setOnClickListener(this);
+        
+        final Button volume_up = (Button) findViewById(R.id.volume_up);
+        volume_up.setOnClickListener(this);
+        
+        final Button volume_down = (Button) findViewById(R.id.volume_down);
+        volume_down.setOnClickListener(this);
     }
     //Plays sound when clicked
     @Override
@@ -36,6 +44,22 @@ public class Sounds extends Activity implements OnClickListener
             else
                 trail_sounds.stop();
                 playing = false;
+            break;
+        case R.id.volume_up:
+            volume += 0.05f;
+            if(volume > 1.0f)
+            {
+                volume = 1.0f
+            }
+            trail_sounds.setVolume(volume,volume);
+            break;
+        case R.id.volume_down:
+            volume -= 0.05f;
+            if(volume < 0.0f)
+            {
+                volume = 0.0f
+            }
+            trail_sounds.setVolume(volume,volume);
             break;
         }
     }
