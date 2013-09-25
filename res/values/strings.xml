@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IAT Companion App</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="AchievementLabel">Goals</string>
+    <string name="AchievementPictureDescription">Goal Picture</string>
+    <string name="WeatherLabel">Weather</string>
+    <string name="WeatherPictureDescription">Weather Picture</string>
+    <string name="TipsLabel">Tips</string>
+    <string name="TipsPictureDescription">Tips Picture</string>
+    <string name="NewsLabel">News</string>
+    <string name="NewsPictureDescription">News Picture</string>
+    <string name="title_activity_achievements_page">GoalPageActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_tips_page">TipsPage</string>
+    <string name="title_activity_achievements_page_main">GoalsPageMain</string>
+    <string name="title_activity_achievements_list_page">GoalsListPage</string>
+    <string name="title_activity_create_medal">CreateMedal</string>
+
+</resources>
